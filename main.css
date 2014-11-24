@@ -74,6 +74,19 @@ button:hover{
 .end-mode{
 	display: none;
 }
-.start-mode{
-	display: inline-block;
+
+#thermometer{
+	margin: 1em auto;
+	border: 1px solid black;
+	width: 15em;
+	height: 2em;
+	display: block;
+	border-radius: 10px;
+}
+
+#mercury{
+	background-color: red;
+	width: 10em;
+	height: 2em;
+	border-radius: 10px;
 }
