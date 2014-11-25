@@ -6,6 +6,11 @@ h1, p {
 	text-align: center;
 }
 
+p{
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
 h1 span {
 	color: red;
 }
@@ -78,7 +83,7 @@ button:hover{
 
 #thermometer{
 	margin: 1em auto;
-	border: 1px solid black;
+	border: 1px solid navy;
 	width: 240px;
 	height: 2em;
 	display: block;
@@ -86,15 +91,9 @@ button:hover{
 }
 
 #mercury{
-	background-color: red;
+	background: -webkit-linear-gradient(left,orange,tomato, red);
 	width: 0px;
 	height: 2em;
 	border-radius: 10px;
-	/*-webkit-animation: slide 2s;*/
 }
 
-/*@-webkit-keyframes slide {
-	0% {width: 0%;}
-	25% {width: 100%;}
-	
-}*/
