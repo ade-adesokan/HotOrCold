@@ -5,18 +5,9 @@ var game={
   submit: document.getElementsByTagName("button")[0],
   new_game: document.getElementsByTagName("button")[1],
   mercury: document.getElementById("mercury"),
-  
+  comp_choice: Math.round(Math.random()*100),
   previous_guess: null,
   new_guess: "",
-  comp_choice:"",
-
-  init: function() {
-    game.comp_choice= Math.round(Math.random()*100);
-    console.log(game.comp_choice);
-    game.submit.classList.remove("end-mode");
-    game.mercury.style.width="0px";
-    game.displays.value= "Ready";
-  },
 
   thermometer : function(input){
   var x = ((100-Math.abs(input-game.comp_choice))*240)/100+ "px";
@@ -40,9 +31,13 @@ var game={
           game.displays.value= "Getting Hotter, try again"; 
           
           game.thermometer(this.new_guess);          
-        } else if (this.new_guess===game.previous_guess) {
+        }
+
+        else if (this.new_guess===game.previous_guess) {
           game.displays.value= "Thought I told you that wasn't the number!!";
-        } else{
+        }
+
+        else{
 
           if (Math.abs(this.new_guess-game.comp_choice)<Math.abs(game.previous_guess-game.comp_choice)) {
             game.displays.value= "Getting Hotter, you are closer";
@@ -79,8 +74,8 @@ var game={
 
 };
 
-window.onload= game.init;
-
+console.log(game.comp_choice);
 game.submit.addEventListener("click",game.check_number);
-game.new_game.addEventListener("click",game.init);
+
+
 
