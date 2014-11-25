@@ -78,7 +78,7 @@ button:hover{
 #thermometer{
 	margin: 1em auto;
 	border: 1px solid black;
-	width: 15em;
+	width: 240px;
 	height: 2em;
 	display: block;
 	border-radius: 10px;
@@ -86,7 +86,14 @@ button:hover{
 
 #mercury{
 	background-color: red;
-	width: 10em;
+	width: 0px;
 	height: 2em;
 	border-radius: 10px;
+	/*-webkit-animation: slide 2s;*/
 }
+
+/*@-webkit-keyframes slide {
+	0% {width: 0%;}
+	25% {width: 100%;}
+	
+}*/
